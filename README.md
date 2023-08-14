@@ -91,7 +91,7 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-`cd my-folder git clone git@github.com:AnsarIbrahim/Vet-Clinic-database.git`
+`cd my-folder git clone git@github.com:AnsarIbrahim/Vet-Clinic.git`
 
 ### Install
 
@@ -149,7 +149,7 @@ You can deploy this project using:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/AnsarIbrahim/Vet-Clinic-database/issues).
+Feel free to check the [issues page](https://github.com/AnsarIbrahim/Vet-Clinic/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
