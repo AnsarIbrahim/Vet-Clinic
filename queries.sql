@@ -192,15 +192,11 @@ GROUP BY
 
 SELECT
     species,
-    AVG(escape_attempts) AS avg_escape_attempts
+    AVG(escape_attempts)
 FROM
     animals
 WHERE
-    EXTRACT(
-        YEAR
-        FROM
-            date_of_birth
-    ) BETWEEN 1990
-    AND 2000
+    date_of_birth >= '1990/01/01'
+    AND date_of_birth <= '2000/12/31'
 GROUP BY
     species;
