@@ -200,3 +200,79 @@ WHERE
     AND date_of_birth <= '2000/12/31'
 GROUP BY
     species;
+
+SELECT
+    o.full_name AS owner_name,
+    a.name AS animal_name
+FROM
+    owners o
+    JOIN animals a ON o.id = a.owner_id
+WHERE
+    o.full_name = 'Melody Pond';
+
+SELECT
+    a.name
+FROM
+    animals a
+    JOIN species s ON a.species_id = s.id
+WHERE
+    s.name = 'Pokemon';
+
+SELECT
+    o.full_name,
+    COALESCE(array_agg(a.name), ARRAY [] :: VARCHAR [])
+FROM
+    owners o
+    LEFT JOIN animals a ON o.id = a.owner_id
+GROUP BY
+    o.full_name;
+
+SELECT
+    s.name,
+    COUNT(a.id) AS animal_count
+FROM
+    species s
+    LEFT JOIN animals a ON s.id = a.species_id
+GROUP BY
+    s.name;
+
+SELECT
+    a.name
+FROM
+    animals a
+    JOIN owners o ON a.owner_id = o.id
+    JOIN species s ON a.species_id = s.id
+WHERE
+    o.full_name = 'Jennifer Orwell'
+    AND s.name = 'Digimon';
+
+SELECT
+    owners.full_name AS owner_name,
+    animals.escape_attempts,
+    animals.name AS animal_name
+FROM
+    animals
+    JOIN owners ON animals.owner_id = owners.id
+WHERE
+    owners.full_name = 'Dean Winchester'
+    AND animals.escape_attempts = 0
+UNION
+SELECT
+    'Dean Winchester' AS owner_name,
+    0 AS escape_attempts,
+    NULL AS animal_name
+LIMIT
+    1;
+
+SELECT
+    o.full_name,
+    COUNT(a.id) AS animal_count
+FROM
+    owners o
+    LEFT JOIN animals a ON o.id = a.owner_id
+GROUP BY
+    o.full_name
+ORDER BY
+    animal_count DESC
+LIMIT
+    1;
