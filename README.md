@@ -3,9 +3,10 @@
 <div align="center">
     <br/>
 
- # Vet-Clinic
+# Vet-Clinic
 
 ![e2954fb3deb2407e8e4bcb40b1fd6376](https://github.com/AnsarIbrahim/LeaderBoard-new/assets/117971223/9d715e43-a095-4b33-b5f2-161236e8fdcc)
+
 </div>
 
 # 📗 Table of Contents
@@ -65,9 +66,11 @@ Vet-Clinic is a project involves creating a PostgreSQL database using SQL to man
 
 ### Key Features <a name="key-features"></a>
 
+- **[Diagram]**
+
+![Alt text](Diagram/Vet-Clinic-diagram.png)
 
 - **[Animals-data-table]**
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -140,7 +143,6 @@ You can deploy this project using:
 
 - [ ] **[Add more relational tables for the vet clinic]**
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -170,12 +172,10 @@ If you like this project give it a ⭐️
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
