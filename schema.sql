@@ -65,3 +65,10 @@ CREATE TABLE visits (
     animal_id INT REFERENCES animals(id),
     visit_date DATE
 );
+
+-- EXPLAIN ANALYZE
+CREATE INDEX INX_A ON VISIT(animal_id ASC);
+
+CREATE INDEX V ON VISIT(vet_id ASC);
+
+CREATE INDEX INX_O ON OWNERS(EMAIL);

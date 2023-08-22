@@ -396,3 +396,28 @@ ORDER BY
     num_visits DESC
 LIMIT
     1;
+
+-- EXPLAIN ANALYZE with Query
+EXPLAIN ANALYZE
+SELECT
+    COUNT(*)
+FROM
+    visit
+where
+    animal_id = 4;
+
+EXPLAIN ANALYZE
+SELECT
+    *
+FROM
+    visit
+where
+    vet_id = 2;
+
+EXPLAIN ANALYZE
+SELECT
+    *
+FROM
+    owners
+where
+    email = 'owner_18327@mail.com';
